@@ -18,3 +18,10 @@ This module automates the scheduled **start** and **stop** of a specified EC2 in
 | `tags`                    | Tags to apply to all resources              | `map(string)` | ✕        |
 
 ## Outputs
+
+| Name                        | Description                                                               |
+|-----------------------------|---------------------------------------------------------------------------|
+| `start_rule_name`           | The name of the EventBridge rule used to start the EC2 instance           |
+| `stop_rule_name`            | The name of the EventBridge rule used to stop the EC2 instance            |
+| `event_target_role_arn`     | The ARN of the IAM role used by EventBridge to trigger SSM automation     |
+| `automation_assume_role_arn`| The ARN of the IAM role assumed by SSM to start/stop EC2 instances        |

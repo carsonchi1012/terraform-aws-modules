@@ -5,7 +5,7 @@ output "start_rule_name" {
 
 output "stop_rule_name" {
   description = "Name of the EventBridge rule that stops the EC2 instance"
-  value       = aws_cloudwatch_event_rule.schedule_tostop_ec2.name
+  value       = aws_cloudwatch_event_rule.schedule_to_stop_ec2.name
 }
 
 output "event_target_role_arn" {
