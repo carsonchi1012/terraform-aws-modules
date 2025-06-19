@@ -1,10 +1,10 @@
-# terraform-aws-eventbridge-ec2-scheduler
+# terraform-aws-eventbridge-ec2-classic-scheduler
 
 This module automates the scheduled **start** and **stop** of a specified EC2 instance to optimise costs and improve operational efficiency.
 
 ## Architecure
 
-![EC2 Scheduler Diagram](eventbridge-ec2-scheduler.png)
+![EC2 Scheduler Diagram](eventbridge-ec2-classic-scheduler.png)
 
 ## Variables
 
