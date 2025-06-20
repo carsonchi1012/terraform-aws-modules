@@ -6,14 +6,18 @@ resource "aws_iam_role_policy" "ec2_automation_assume_role_policy" {
     Version = "2012-10-17",
     Statement = [
       {
-        Effect   = "Allow",
-        Action   = [
+        Action = [
           "ec2:StartInstances",
-          "ec2:StopInstances",
-          "ec2:DescribeInstanceStatus"
+          "ec2:StopInstances"
         ],
-        Resource = "*"
+        Effect   = "Allow",
+        Resource = "arn:aws:ec2:${data.aws_region.current.id}:${data.aws_caller_identity.current.account_id}:instance/${var.ec2_id}"
       },
+      {
+        Action = "ec2:DescribeInstances",
+        Effect = "Allow",
+        Resource = "*"
+      }
     ]
   })
 }
